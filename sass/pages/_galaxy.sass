@@ -1,0 +1,26 @@
+@use "../abstracts/_all" as abstracts
+    
+.galaxy
+    background-color: black
+    position: relative
+    overflow-x: hidden
+    
+    &_planets-container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        height: 100vh
+        gap: abstracts.$gap-between-planets
+        padding-left: calc(50vw - ( abstracts.$sun-size / 2 ))
+        position: relative
+        z-index: 1
+        overflow: scroll
+
+    &_stars-container
+        position: absolute
+        top:0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 0
+        

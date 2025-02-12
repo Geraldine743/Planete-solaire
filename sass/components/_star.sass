@@ -1,0 +1,13 @@
+@use '../abstracts/all' as abstracts
+
+.star
+
+    @for $index from 1 through 30
+        &:nth-child(#{$index})
+            position: absolute
+            top: abstracts.random-position()
+            left: abstracts.random-position()
+            rotate: abstracts.random-rotate()
+            filter: abstracts.random-blur()
+            width: abstracts.random-size-star()
+            height: abstracts.random-size-star()
